@@ -17,7 +17,7 @@ namespace pryOtrosControles
             InitializeComponent();
         }
 
-        
+        //contador de tiempo
         int tiempo = 0;
 
         private void btnTrabajo_Click(object sender, EventArgs e)
@@ -46,6 +46,18 @@ namespace pryOtrosControles
         {
             tiempo++;
             lblEstado.Text = tiempo.ToString();
+        }
+
+
+
+
+        // --------------------------------------------------------------------------
+
+        // Ventana Auditoria
+        private void personalizarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmAuditoria x = new frmAuditoria();
+            x.ShowDialog();
         }
     }
 }

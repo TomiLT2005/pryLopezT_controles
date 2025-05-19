@@ -42,6 +42,7 @@ namespace pryOtrosControles
             }
         }
 
+
         private void dtpTiempo_Tick(object sender, EventArgs e)
         {
             tiempo++;

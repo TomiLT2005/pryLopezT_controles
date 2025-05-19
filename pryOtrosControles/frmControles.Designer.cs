@@ -52,7 +52,7 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.seleccionartodoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.herramientasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.personalizarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmAuditoria = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.personalizarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.opcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -247,7 +247,7 @@
             // herramientasToolStripMenuItem
             // 
             this.herramientasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.personalizarToolStripMenuItem1,
+            this.tsmAuditoria,
             this.toolStripMenuItem1,
             this.personalizarToolStripMenuItem,
             this.opcionesToolStripMenuItem});
@@ -255,29 +255,29 @@
             this.herramientasToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
             this.herramientasToolStripMenuItem.Text = "&Herramientas";
             // 
-            // personalizarToolStripMenuItem1
+            // tsmAuditoria
             // 
-            this.personalizarToolStripMenuItem1.Image = global::pryOtrosControles.Properties.Resources.imgAuditoria;
-            this.personalizarToolStripMenuItem1.Name = "personalizarToolStripMenuItem1";
-            this.personalizarToolStripMenuItem1.Size = new System.Drawing.Size(137, 22);
-            this.personalizarToolStripMenuItem1.Text = "Auditoria";
-            this.personalizarToolStripMenuItem1.Click += new System.EventHandler(this.personalizarToolStripMenuItem1_Click);
+            this.tsmAuditoria.Image = global::pryOtrosControles.Properties.Resources.imgAuditoria;
+            this.tsmAuditoria.Name = "tsmAuditoria";
+            this.tsmAuditoria.Size = new System.Drawing.Size(180, 22);
+            this.tsmAuditoria.Text = "Auditoria";
+            this.tsmAuditoria.Click += new System.EventHandler(this.personalizarToolStripMenuItem1_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(134, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 6);
             // 
             // personalizarToolStripMenuItem
             // 
             this.personalizarToolStripMenuItem.Name = "personalizarToolStripMenuItem";
-            this.personalizarToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.personalizarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.personalizarToolStripMenuItem.Text = "&Personalizar";
             // 
             // opcionesToolStripMenuItem
             // 
             this.opcionesToolStripMenuItem.Name = "opcionesToolStripMenuItem";
-            this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.opcionesToolStripMenuItem.Text = "&Opciones";
             // 
             // ayudaToolStripMenuItem
@@ -412,7 +412,7 @@
         private System.Windows.Forms.StatusStrip ssMostrar;
         private System.Windows.Forms.ToolStripStatusLabel lblEstado;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem personalizarToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem tsmAuditoria;
     }
 }
 

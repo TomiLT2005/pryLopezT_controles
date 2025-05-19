@@ -13,7 +13,11 @@ namespace pryOtrosControles
 {
     public partial class frmAuditoria: Form
     {
-      
+
+        //conexion a la base de datos
+        clsConexionBD conexion = new clsConexionBD();
+
+
         public frmAuditoria()
         {
             InitializeComponent();
@@ -27,14 +31,12 @@ namespace pryOtrosControles
         private void pnlPanelTrabajo_MouseMove(object sender, MouseEventArgs e)
         {
             
-            timerTiempoTrabajo.Enabled = true;                                                  //se activa cuando muevo el cursor
+            timerTiempoTrabajo.Enabled = true;                   //se activa cuando muevo el cursor
 
-            lblCoordenadas.Text = "X: " + e.X.ToString() + " Y: " + e.Y.ToString();             //coordenadas del mouse
+            string coordenadas = e.Location.ToString();          //coordenadas del mouse
+            lblCoordenadas.Text = coordenadas;                   //muestro las coordenadas en el label
 
-            using (StreamWriter swAuditar = new StreamWriter("ZonaDeCalor.txt",true))                //escribir en el archivo
-            {
-                swAuditar.WriteLine(lblCoordenadas.Text);
-            }                                
+            conexion.GuardarCoordenadas(coordenadas);            //guardo las coordenadas en la base de datos
         }
 
 
@@ -56,22 +58,9 @@ namespace pryOtrosControles
         private void btnAuditar_Click(object sender, EventArgs e)
         {
             lstCoordenadas.Visible = true;
-            OpenFileDialog archivoCoordenadas = new OpenFileDialog();
+            lstCoordenadas.Items.Clear();
 
-            if (archivoCoordenadas.ShowDialog() == DialogResult.OK)
-            {
-                using (StreamReader srAuditar = new StreamReader(archivoCoordenadas.FileName))
-                {
-                    while (!srAuditar.EndOfStream)
-                    {
-                        lstCoordenadas.Items.Add(srAuditar.ReadLine());
-                    }
-                }
-            }
-            else
-            {
-                MessageBox.Show("No se seleccionó ningún archivo.");
-            }
+            conexion.MostrarCoordenadas(lstCoordenadas);
         }
     }
 }

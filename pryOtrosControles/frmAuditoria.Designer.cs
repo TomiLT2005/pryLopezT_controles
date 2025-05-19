@@ -30,13 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             this.pnlPanelTrabajo = new System.Windows.Forms.Panel();
+            this.lstCoordenadas = new System.Windows.Forms.ListBox();
             this.lblShowTiempo = new System.Windows.Forms.Label();
             this.lblShowCoordenadas = new System.Windows.Forms.Label();
             this.lblTiempo = new System.Windows.Forms.Label();
             this.lblCoordenadas = new System.Windows.Forms.Label();
             this.btnAuditar = new System.Windows.Forms.Button();
             this.timerTiempoTrabajo = new System.Windows.Forms.Timer(this.components);
-            this.lstCoordenadas = new System.Windows.Forms.ListBox();
             this.pnlPanelTrabajo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,6 +49,15 @@
             this.pnlPanelTrabajo.TabIndex = 0;
             this.pnlPanelTrabajo.MouseLeave += new System.EventHandler(this.pnlPanelTrabajo_MouseLeave);
             this.pnlPanelTrabajo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlPanelTrabajo_MouseMove);
+            // 
+            // lstCoordenadas
+            // 
+            this.lstCoordenadas.FormattingEnabled = true;
+            this.lstCoordenadas.Location = new System.Drawing.Point(0, 0);
+            this.lstCoordenadas.Name = "lstCoordenadas";
+            this.lstCoordenadas.Size = new System.Drawing.Size(543, 329);
+            this.lstCoordenadas.TabIndex = 0;
+            this.lstCoordenadas.Visible = false;
             // 
             // lblShowTiempo
             // 
@@ -103,15 +112,6 @@
             // timerTiempoTrabajo
             // 
             this.timerTiempoTrabajo.Tick += new System.EventHandler(this.timerTiempoTrabajo_Tick);
-            // 
-            // lstCoordenadas
-            // 
-            this.lstCoordenadas.FormattingEnabled = true;
-            this.lstCoordenadas.Location = new System.Drawing.Point(0, 0);
-            this.lstCoordenadas.Name = "lstCoordenadas";
-            this.lstCoordenadas.Size = new System.Drawing.Size(543, 329);
-            this.lstCoordenadas.TabIndex = 0;
-            this.lstCoordenadas.Visible = false;
             // 
             // frmAuditoria
             // 

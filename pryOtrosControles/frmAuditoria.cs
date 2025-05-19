@@ -19,6 +19,7 @@ namespace pryOtrosControles
             InitializeComponent();
         }
 
+
         //contador de tiempo
         int tiempo = 0;
 
@@ -30,7 +31,7 @@ namespace pryOtrosControles
 
             lblCoordenadas.Text = "X: " + e.X.ToString() + " Y: " + e.Y.ToString();             //coordenadas del mouse
 
-            using (StreamWriter swAuditar = new StreamWriter("ZonaDeCalor.txt"))                //escribir en el archivo
+            using (StreamWriter swAuditar = new StreamWriter("ZonaDeCalor.txt",true))                //escribir en el archivo
             {
                 swAuditar.WriteLine(lblCoordenadas.Text);
             }                                
@@ -46,7 +47,8 @@ namespace pryOtrosControles
         private void timerTiempoTrabajo_Tick(object sender, EventArgs e)
         {
             tiempo++;
-            lblTiempo.Text = tiempo.ToString();
+            TimeSpan ts = TimeSpan.FromSeconds(tiempo);
+            lblTiempo.Text = ts.ToString(@"hh\:mm\:ss");
         }
 
 

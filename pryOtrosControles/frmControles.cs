@@ -45,7 +45,8 @@ namespace pryOtrosControles
         private void dtpTiempo_Tick(object sender, EventArgs e)
         {
             tiempo++;
-            lblEstado.Text = tiempo.ToString();
+            TimeSpan ts = TimeSpan.FromSeconds(tiempo);
+            lblEstado.Text = ts.ToString(@"hh\:mm\:ss");
         }
 
 
